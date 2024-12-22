@@ -31,30 +31,23 @@ public class RemoveDuplicateElemenet {
 	
 	
 	public static int remove(int arr[], int n) {
-		
-		
-		// corner case
-		
-		if(n==0 || n==1) {
-			return n;
-		}
-		
-		// To track seen elements
-		Set<Integer> set= new LinkedHashSet<Integer>();
-		
-		  // To maintain the new size of the array
-		int resultindex=0;
-		
-		
-		for(int i=0;i<arr.length;i++) {
-			if(!set.contains(arr[i])) {
-				set.add(arr[i]);
-				arr[resultindex++]=arr[i];
-			}
-		}
-		
-		  // Return the size of the array with unique elements
-		return resultindex;
-	}
+	    if (n == 0 || n == 1) {
+	        return n;
+	    }
 
+	    Set<Integer> set = new LinkedHashSet<>();  // LinkedHashSet preserves order
+	    int resultindex = 0;
+
+	    for (int i = 0; i < arr.length; i++) {
+	        // Always add to the set
+	        if (set.add(arr[i])) {           // when the duplicate element will be found it will not add it will return false.
+	            arr[resultindex++] = arr[i];
+	        }
+	    }
+
+	    return resultindex;
+	}
 }
+
+// this is used when you want to return the array element in the function.
+
