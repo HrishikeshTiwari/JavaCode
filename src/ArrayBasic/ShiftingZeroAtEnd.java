@@ -1,4 +1,5 @@
 
+
 /* Shifting 0 at the end of the array. 
  * 
  * Brute force Approach
