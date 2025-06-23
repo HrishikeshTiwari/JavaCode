@@ -1,5 +1,22 @@
 package Dutch_National_Flag_Alogirthm;
 
+/*
+ * 🎯 Problem:
+Given an array with elements containing only 0, 1, and 2, sort the array in ascending order in-place, meaning:
+All 0s come first,
+followed by all 1s,
+then all 2s.
+🧠 Intuition:
+Use three pointers:
+low → where the next 0 should go
+mid → current index being checked
+high → where the next 2 should go
+
+
+
+
+ */
+
 public class Sort_012_In_Array {
 
 	public static void main(String[] args) {
